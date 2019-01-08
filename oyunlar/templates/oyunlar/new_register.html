@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>TrOyun|Oyunların Gerçek Adresi|</title>
+    <!-- Bootstrap core CSS -->
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'login.css' %}">
+    <!-- Custom styles forthis template -->
+     <script
+            src="{% static 'register.js' %}">
+    </script>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'shop-homepage.css' %}">
+    {% load static %}
+    <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
+	{% load static %}
+    <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body background={% static  'images/bg.jpg'%}>
+
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" style="font-family:Verdana,sans-serif;font-size: 15px">
+    <div class="container">
+        <a class="navbar-brand" href="{% url 'index' %}">TrOyun|</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'index' %}">AnaSayfa
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'hakkimizda' %}">Hakkımızda</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'login_sign' %}">Giriş|Kaydol</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-lg-2">
+
+        </div>
+        <!-- /.col-lg-3 -->
+
+        <div class="col-lg-9">
+
+
+<div class="container">
+			<div class="row main">
+
+				<div class="main-login main-center">
+                    <h3 class="title">Kaydol</h3>
+					<form class="form-horizontal" method="post" name="myForm" action="#" onsubmit="return(validate());">
+                        {% csrf_token %}
+						<div class="form-group">
+							<label for="username" class="cols-sm-2 control-label">Kullanıcı Adı:</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+									<input type="text" class="form-control" name="username" id="username"  placeholder="Kullanıcı Adınız"/>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="email" class="cols-sm-2 control-label">Email:</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+									<input type="text" class="form-control" name="email" id="email"  placeholder="Mail Adresiniz"/>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="form-group">
+							<label for="password" class="cols-sm-2 control-label">Şifre:</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+									<input type="password" class="form-control" name="password" id="password"  placeholder="Şifreniz"/>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="confirm" class="cols-sm-2 control-label">Şifre(Tekrar)</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+									<input type="password" class="form-control" name="confirm" id="confirm"  placeholder="Tekrar Şifreniz"/>
+								</div>
+							</div>
+						</div>
+			<div class="form-group ">
+
+							<button type="submit"   class="btn btn-primary btn-lg btn-block login-button">Kaydol</button>
+
+            </div>
+						<div class="login-register">
+				            <a href="{% url 'login_sign' %}">Giriş Yap</a>
+				         </div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+ {%if hata_mes == '1'%}
+        <script>
+        alert('Bu isimde veya mail de kayıtlı kullanıcı zaten var!')
+        </script>
+    {% endif %}
+            <!-- /.row -->
+
+        </div>
+        <!-- /.col-lg-9 -->
+
+    </div>
+    <!-- /.row -->
+
+</div>
+<!-- /.container -->
+
+<!-- Footer -->
+<footer class="py-5 bg-dark" style="margin-top:2%;font-family:Verdana,sans-serif;font-size: 15px">
+    <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; TrOyun</p>
+    </div>
+    <!-- /.container -->
+</footer>
+
+<!-- Bootstrap core JavaScript -->
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'vendor/jquery/jquery.min.js' %}">
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}">
+
+</body>
+
+</html>

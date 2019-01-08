@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>TrOyun|Oyunların Gerçek Adresi|</title>
+    <!-- Bootstrap core CSS -->
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
+     <!-- Custom styles forthis template -->
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'shop-homepage.css' %}">
+    {% load static %}
+    <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
+	{% load static %}
+    <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body background={% static  'images/bg.jpg'%}>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" style="font-family:Verdana,sans-serif;font-size: 15px">
+    <div class="container">
+        <a class="navbar-brand" href="{% url 'index' %}">TrOyun|</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'index' %}">AnaSayfa
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'hakkimizda' %}">Hakkımızda</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'login_sign' %}">Giriş|Kaydol</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-lg-2">
+
+        </div>
+        <!-- /.col-lg-3 -->
+
+        <div class="col-lg-9">
+
+
+<div class="container" style="margin-top: 20px">
+			<div class="row main">
+				<div class="panel-heading">
+	               <div class="panel-title text-center">
+
+	               		<hr />
+	               	</div>
+	            </div>
+
+<p>	Bu Websitesi Düzce Üniversitesi Bilgisayar Mühendisliği Teknoloji Fakültesi Öğrencilerinden<br>
+    142120001-Mert CEYLAN,<br>
+    142120006-Taner CANSEVER,<br>
+    142120009-Melih BEŞİR tarafından Bitirme Tezi olarak hazırlanmıştır.<br><br>
+    Çocukların uygunsuz ve şiddet içerikli oyunlardan olumsuz yönde etkilenmesi ve etkilerin kendisine, aile ve arkadaşlık ilişkilerine kısacası şuan ki ve gelecekteki hayatını etkilemesi, unutulmaya yüz tutmuş geleneksel sokak oyunlarının yeniden hatırlanması ve bu oyunların çocuklar üzerindeki olumlu etkileri, her geçen gün gelişmekte olan teknoloji, sokaktaki olumsuzlukların artması, ailelerin sokağa olan güvensizliğinin artması ile birlikte çocukların sokaktan uzaklaşıp sanal oyunlara yönelmesi sebebiyle çocukları uygunsuz ve şiddet içerikli oyunlardan uzak tutmak için  bu oyunların geliştirilerek bilgisayar ortamına taşınıp çocukların güvenle vakit geçirebilecekleri eğitici ve öğretici oyunlar haline getirilmesi, dikkat çekici görseller içermesini sağlayarak çocukların tercih etmesini sağlamak, internetteki oyun sitelerinde ki uygunsuz ve şiddet içeren yabancı oyunlar yerine eğitici ve öğretici olan geleneksel sokak oyunlarının çocuklar tarafından tercih edilmesi, çocukların eğitiminde, aile ve arkadaşlık ilişkilerini güçlendirme, arkadaş edinme, karşılaştığı sorunlarla baş etme ve çözüm üretmesi, kendi yetenek ve eğilimlerinin farkına varma ve bu yetenek ve eğilimlerini geliştirmesi, özgüven kazanması, kendisine ve insanlara güvenmesi ve bu güveni arttırması yani çocuk oyun ikilisinin güvenle oluşturulması konuları incelenmiş ve değerlendirilmiştir.
+    <br><br>
+    <b style="text-align: center">TEŞEKKÜR</b>
+
+Lisans öğrenimimde ve bu tezin hazırlanmasında gösterdiği her türlü destek ve yardımdan dolayı çok değerli hocam Dr. Öğr. Üyesi Metin TOZ’a en içten dileklerimle teşekkür ederim.
+Bu çalışma boyunca yardımlarını ve desteklerini esirgemeyen sevgili aileme ve çalışma arkadaşlarıma sonsuz teşekkürlerimi sunarım.
+
+
+</p>
+			</div>
+		</div>
+
+
+            <!-- /.row -->
+
+        </div>
+        <!-- /.col-lg-9 -->
+
+    </div>
+    <!-- /.row -->
+
+</div>
+<!-- /.container -->
+
+<!-- Footer -->
+<footer class="py-5 bg-dark" style="margin-top:30%;font-family:Verdana,sans-serif;font-size: 15px">
+    <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; TrOyun</p>
+    </div>
+    <!-- /.container -->
+</footer>
+
+<!-- Bootstrap core JavaScript -->
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'vendor/jquery/jquery.min.js' %}">
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}">
+
+</body>
+
+</html>

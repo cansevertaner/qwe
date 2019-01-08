@@ -1,0 +1,11 @@
+{
+"companyName": "DefaultCompany",
+"productName": "celikcomak",
+"dataUrl": "Çelik Çomak.data.unityweb",
+"asmCodeUrl": "Çelik Çomak.asm.code.unityweb",
+"asmMemoryUrl": "Çelik Çomak.asm.memory.unityweb",
+"asmFrameworkUrl": "Çelik Çomak.asm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"splashScreenStyle": "Dark",
+"backgroundColor": "#222C36"
+}

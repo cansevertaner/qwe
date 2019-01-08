@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+      {% csrf_token %}
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>{{ game.game_title }}</title>
+
+  {% load staticfiles %}
+     {%load static%}
+          <link rel="shortcut icon" src="{% static static1 %}">
+     {%load static%}
+          <link rel="stylesheet" src="{% static static2%}">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="https://www.w3schools.com/w3css/4/w3.css">
+        {% load static %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     {%load static%}
+          <script  src="{% static static3%}"></script>
+     {% load static %}
+          <link rel="stylesheet" type="text/css" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
+     {% load static %}
+           <link rel="stylesheet" type="text/css" href="{% static 'shop-homepage.css' %}">
+     {% load static %}
+          <script  src="{% static static4%}"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"> </script>
+    <script> var csrf="{{ csrf_token }}" </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      <script>
+      var gameInstance = UnityLoader.instantiate("gameContainer", "{% static static5 %}", {onProgress: UnityProgress});
+    </script>
+        {% load static %}
+         <script
+                    src="{% static 'vote.js' %}">
+            </script>
+  </head>
+  <body style="margin-left:17%; !important;margin-right:20%; !important;" background={% static  'images/bg.jpg'%}>
+  {% if not request.user.id  %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" style="font-family:Verdana,sans-serif;font-size: 15px">
+    <div class="container">
+        <a class="navbar-brand" href="{% url 'index' %}">TrOyun|</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'index' %}">AnaSayfa
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">Hakkımızda</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">İletişim</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{%  url 'login_sign' %}">Giriş|Kaydol</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+{% else %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" style="font-family:Verdana,sans-serif;font-size: 15px">
+    <div class="container">
+        <a class="navbar-brand" href="{% url 'index' %}">TrOyun|</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'index' %}">AnaSayfa
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                 <li class="nav-item">
+                    <a class="nav-link" href="">Profil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'hakkimizda' %}">Hakkımızda</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="oyunlar/login_sign.html">Çıkış Yap</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+{% endif %}
+    <div class="webgl-content">
+      <div id="gameContainer" style="width: 960px; height: 600px;padding-left:300% !important;margin-left: 300px; "></div>
+      <div class="footer">
+        <div class="webgl-logo"></div>
+        <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
+
+      </div>
+    </div>
+  <div class="col-lg-4 col-md-6 mb-4" >
+                    <div class="card h-100" style="margin-left:-16px; width: 961px;">
+                          <div class="card-body" >
+                              <h3 class="card-text" style="font-size: 14px;text-transform: capitalize;">Oyun Adı:{{game.game_title}}</h3>
+
+                            <p class="card-text" style="font-size: 12px">Oyun açıklaması:{{game.game_text}}</p>
+                        </div>
+                        <div class="card-footer">
+                            {% if yildiz == 1 %}
+                             <small class="text-muted">&#9733; &#9734; &#9734; &#9734; &#9734;</small>
+                            {% elif yildiz == 2 %}
+                                 <small class="text-muted">&#9733; &#9733; &#9734; &#9734; &#9734;</small>
+                            {% elif yildiz == 3 %}
+                                 <small class="text-muted">&#9733; &#9733; &#9733; &#9734; &#9734;</small>
+                            {% elif yildiz == 4 %}
+                                 <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                            {% elif yildiz == 5 %}
+                                 <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9733;</small>
+                            {% else %}
+                             <small class="text-muted">&#9734; &#9734; &#9734; &#9734; &#9734;</small>
+
+                            {% endif %}
+                            <div class="vote" id="up_vote" data-href="{% url 'new_vote' game.id %}"  data-game-id="{{ game.id }}" data-user-id="{{ user.id }}">
+
+                            Toplam Oy<p id="vote-count" style="margin-left:30px;">{{ game.get_vote_count }}</p>
+
+                            <i class="fa fa-thumbs-up" id="add_vote"  style="font-size:24px; padding-left:10px "  value_sts="1" data-game-id="{{ game.id }}" data-user-id="{{ user.id }}"></i>
+
+                            <i class="fa fa-thumbs-down" id="add_vote_neg" value_sts="2" style="font-size:24px"></i>
+
+                            </div>
+                          </div>
+                    </div>
+  </div>
+  <footer class="py-5 bg-dark" style="margin-top:15%;margin-left:-280px;width:200%;font-family:Verdana,sans-serif;font-size: 15px">
+    <div class="container" style="margin-left:13%">
+        <p class="m-0 text-center text-white" >Copyright &copy; TrOyun</p>
+    </div>
+    <!-- /.container -->
+</footer>
+  </body>
+
+</html>

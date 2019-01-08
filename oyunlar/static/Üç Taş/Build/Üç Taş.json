@@ -1,0 +1,11 @@
+{
+"companyName": "DefaultCompany",
+"productName": "Game",
+"dataUrl": "Üç Taş.data.unityweb",
+"asmCodeUrl": "Üç Taş.asm.code.unityweb",
+"asmMemoryUrl": "Üç Taş.asm.memory.unityweb",
+"asmFrameworkUrl": "Üç Taş.asm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"splashScreenStyle": "Dark",
+"backgroundColor": "#222C36"
+}
